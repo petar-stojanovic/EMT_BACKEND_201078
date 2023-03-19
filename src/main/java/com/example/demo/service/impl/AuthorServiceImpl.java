@@ -21,4 +21,9 @@ public class AuthorServiceImpl implements AuthorService {
         return this.authorRepository.findAll();
     }
 
+    @Override
+    public List<Author> saveAll(List<Author> authors) {
+        return this.authorRepository.saveAll(authors);
+    }
+
 }
