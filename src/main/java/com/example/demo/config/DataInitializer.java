@@ -57,7 +57,6 @@ public class DataInitializer {
         List<Book> books = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
             int randomAuthorNumber = rand.nextInt(authors.size());
-
             Book book = new Book("Book " + (i + 1), Category.getRandom(), authors.get(randomAuthorNumber), rand.nextInt(10));
 
             books.add(book);
