@@ -2,6 +2,7 @@ package com.example.demo.web.rest;
 
 import com.example.demo.model.Book;
 import com.example.demo.model.dto.BookDto;
+import com.example.demo.model.enumerations.Category;
 import com.example.demo.service.BookService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -61,4 +62,10 @@ public class BookController {
         this.bookService.rentBook(id);
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/categories")
+    public List<Category> findAllCategories() {
+        return List.of(Category.values());
+    }
+
 }
